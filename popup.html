@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Parental Control</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            width: 250px;
+            padding: 15px;
+            text-align: center;
+            background: #f7f7f7;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background: white;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .info {
+            font-size: 14px;
+            margin-top: 10px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h2>Parental Control</h2>
+    <p class="info">Select an app and set a time limit.</p>
+
+    <select id="appSelect">
+        <option value="youtube.com">YouTube</option>
+        <option value="instagram.com">Instagram</option>
+        <option value="tiktok.com">TikTok</option>
+        <option value="twitter.com">Twitter (X)</option>
+    </select>
+
+    <input type="number" id="timeLimit" placeholder="Enter time limit (minutes)" min="1">
+
+    <button id="setLimit">SET</button>
+
+    <p class="info" id="status"></p>
+
+    <script src="popup.js"></script>
+</body>
+</html>
