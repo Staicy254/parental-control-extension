@@ -9,12 +9,13 @@
             padding: 15px;
             text-align: center;
             background: #f7f7f7;
+            animation: fadeIn 0.5s ease-in-out;
         }
-
+    
         h2 {
             color: #333;
         }
-
+    
         select, input {
             width: 100%;
             padding: 8px;
@@ -23,7 +24,7 @@
             border: 1px solid #ccc;
             background: white;
         }
-
+    
         button {
             width: 100%;
             padding: 10px;
@@ -34,18 +35,32 @@
             border-radius: 5px;
             font-size: 16px;
             cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
         }
-
+    
         button:hover {
             background: #0056b3;
+            transform: scale(1.05);
         }
-
+    
         .info {
             font-size: 14px;
             margin-top: 10px;
             color: #555;
         }
+    
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
+    
 </head>
 <body>
     <h2>Parental Control</h2>
